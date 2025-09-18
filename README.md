@@ -60,7 +60,7 @@ Four models were developed and trained:
 * **GB Classifier:** 99.52%
 * **RF Classifier:** 98.65%
 
-### Key Findings:
+## Key Findings:
 
 * High Performance Overall: All four models performed exceptionally well, with accuracy scores ranging from 98.59% to 99.58%. This indicates that the dataset is well-suited for a standard machine learning approach and that the features you used (likely the TF-IDF vectorized text) are highly effective at distinguishing between fake and true news.
 
@@ -70,7 +70,7 @@ Four models were developed and trained:
 
 * Similar Performance from Logistic Regression and Random Forest: The Logistic Regression and Random Forest (RF) Classifier models showed very similar performance to each other, with scores of 98.59% and 98.65% respectively. While still excellent, they are slightly less accurate than the top two models.
 
-### Conclusion:
+## Conclusion:
 
 The primary conclusion is that a simple Decision Tree Classifier is the most effective model for this particular fake news detection problem, providing the highest accuracy with a very straightforward implementation. Both the Decision Tree and Gradient Boosting models demonstrate a near-perfect ability to classify news articles as fake or true.
 
