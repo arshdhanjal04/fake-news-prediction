@@ -45,28 +45,36 @@ These steps streamlined the text data, reducing noise and complexity while focus
 
 ## Modeling
 
-Two models were developed and trained:
+Four models were developed and trained:
 
 1. **Logistic Regression**
-2. **Long Short-Term Memory (LSTM)**
+2. **Decision Tree Classifier**
+3. **Gradient Boosting Classifier**
+4. **Random Forest Classifier**
 
-Text data was transformed into feature vectors using the `CountVectorizer` class from the *scikit-learn* library. Additionally, the LSTM model was tuned for performance optimization, and results were compared across the models. Model performance was evaluated primarily using **accuracy** as the metric.
 
 ## Model Evaluation
 
-* **Logistic Regression:** 99.53% (highest accuracy)
-* **LSTM:** 98.48%
-* **Tuned LSTM:** 98.46%
+* **Logistic Regression:** 98.59% 
+* **DT Classifier:** 99.58%
+* **GB Classifier:** 99.52%
+* **RF Classifier:** 98.65%
 
 ### Key Findings:
 
-* Logistic Regression outperformed the deep learning models, achieving the highest accuracy.
-* Both the basic and tuned LSTM models delivered comparable results with only slight variations.
-* The results highlight that, in some cases, traditional machine learning approaches can be more effective than deep learning models.
+* High Performance Overall: All four models performed exceptionally well, with accuracy scores ranging from 98.59% to 99.58%. This indicates that the dataset is well-suited for a standard machine learning approach and that the features you used (likely the TF-IDF vectorized text) are highly effective at distinguishing between fake and true news.
+
+* Decision Tree Classifier is the Top Performer: The Decision Tree (DT) Classifier achieved the highest accuracy at 99.58%, making it the best-performing model among the four.
+
+* Gradient Boosting is a Close Second: The Gradient Boosting (GB) Classifier was a very close second with an accuracy of 99.52%, nearly matching the performance of the Decision Tree.
+
+* Similar Performance from Logistic Regression and Random Forest: The Logistic Regression and Random Forest (RF) Classifier models showed very similar performance to each other, with scores of 98.59% and 98.65% respectively. While still excellent, they are slightly less accurate than the top two models.
 
 ### Conclusion:
 
-With an accuracy of **99.53%**, Logistic Regression proved to be the most effective model for fake news detection in this study. Its efficiency in analyzing text-based features allows for quick and precise classification of news articles as real or fake. This makes it a strong candidate for real-time applications, enabling robust content filtering and preserving the integrity of information dissemination.
+The primary conclusion is that a simple Decision Tree Classifier is the most effective model for this particular fake news detection problem, providing the highest accuracy with a very straightforward implementation. Both the Decision Tree and Gradient Boosting models demonstrate a near-perfect ability to classify news articles as fake or true.
+
+The high accuracy of all models suggests that the problem is not particularly complex, and even basic models like Logistic Regression can achieve strong results. For a production environment, the Decision Tree would be a great choice due to its high accuracy and often faster prediction speed compared to more complex ensemble models like Gradient Boosting.
 
 
 
